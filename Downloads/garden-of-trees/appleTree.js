@@ -1,79 +1,79 @@
-'gunakan yang ketat'
+'use strict'
 
-kelas  AppleTree  {
-    // konstruktor
-    konstruktor ( tree_name , tree_age , tree_height , treeMatrueAge , treeHealthStatus , treeLimitAge , treeStopAge )  {
-        ini . _nama  =  nama_pohon ;
-        ini . _umur  =  umur_pohon ;
-        ini . _height  =  tinggi_pohon ;
-        ini . _buah  =  [ ] ;
-        ini . dipanen  =  '' ;
-        ini . _healthStatus  =  pohonHealthStatus ;
-        ini . _MatrueAge  =  pohonMatrueAge ; ;
-        ini . _limitAge  =  treeLimitAge ;
-        ini . _stopAge  =  treeStopAge ;
+class AppleTree {
+    // constructor
+    constructor(tree_name,tree_age,tree_height,treeMatrueAge,treeHealthStatus,treeLimitAge,treeStopAge) {
+        this._name = tree_name;
+        this._age = tree_age;
+        this._height = tree_height;
+        this._fruits = [];
+        this.harvested = '';
+        this._healthStatus = treeHealthStatus;
+        this._MatrueAge = treeMatrueAge;
+        this._limitAge = treeLimitAge;
+        this._stopAge = treeStopAge;
     }
 
-    // pengambil
-    dapatkan  nama ( )  {
-        kembali  ini . _nama ;
+    // getter
+    get name() {
+        return this._name;
     }
 
-    dapatkan  umur ( )  {
-        kembali  ini . _usia ; 
+    get age() {
+        return this._age; 
     }
 
-    dapatkan  tinggi ( )  {
-        ini . _tinggi ;
+    get height() {
+        this._height;
     }
 
-    mendapatkan buah-  buahan ( )  {
-        kembali  ini . _buah ;
+    get fruits() {
+        return this._fruits;
     }
 
-    dapatkan  status kesehatan ( )  {
-        kembali  ini . _status kesehatan ;
+    get healthStatus() {
+        return this._healthStatus;
     }
 
-     panen ( )  { _
-        kembali  ini . _dipanen ;
+    get harvested() {
+        return this._harvested;
     }
 
-    mendapatkan  usia dewasa ( )  {
-        kembali  ini . _dewasaUsia ;
+    get matureAge() {
+        return this._matureAge;
     }
 
-    dapatkan  batas usia ( )  {
-        kembali  ini . _batasUsia ;
+    get limitAge() {
+        return this._limitAge;
     }
 
-    // penyetel
-    atur  usia ( nilai )  {
-        ini . _umur  =  nilai ;
+    // setter
+    set age(value) {
+        this._age = value;
     }
 
-    // tumbuh
-    tumbuh ( )  {
-        ini . _usia ++ ;
+    // grow
+    grow() {
+        this._age++;
         /*
          * buatlah sebuah kondisi jika kalau umur pohon lebih besar atau sama dengan dari limit umur limit-nya maka pohon tidak sehat
-         * jika umur pohon lebih kecil dari umur pohon berhenti tumbuh, maka pohon bertambah secara acak
+         * jika umur pohon lebih kecil dari umur pohon berhenti tumbuh, maka pohon bertambah tinggi secara random
          * tinggi pohon dibulatkan ke bulatan terbesar
         */
         
     }
 
-    // menghasilkan beberapa buah
-    menghasilkanBuah ( )  {
-        /*
-          * jika pohon ini sudah mencapai umur yang matang (mature) atau lebih besar dari umur matangnya, maka pohon akan berbuah
+    // produce some fruits
+    produceFruits() {
+        /* 
+          * jika pohon ini sudah mencapai umur yang matang (mature) atau lebih besar dari umur matangnya, maka pohon akan berbuah 
           * buat kelas buah di luar kelas pohon
-          * hasil buah akan disimpan di dalam seperti buah
+          * hasil buah akan disimpan di dalam seperti fruit
         */
     }
     
-    // ambil buah
-    panen ( )  {
+    // get some fruit
+    harvest() {
         /*
          * menentukan jumlah seluruh buah
         */
